@@ -27,3 +27,6 @@ data/
 
 # uv
 .uv/
+
+# Local-only config
+CLAUDE.md

@@ -11,7 +11,6 @@ Gastgeber Cloud is a fictional software company that sells booking and point-of-
 Board: [Customer Success Copilot](https://github.com/users/Julia20250701/projects/1)
 
 Files in this repo:
-- `CLAUDE.md` – working rules for the AI coding assistant (Claude Code) on this project
 - `README.md` – project description (this file)
 - `DECISIONS.md` – log of key decisions
 - `pyproject.toml` – Python project configuration (uv)
