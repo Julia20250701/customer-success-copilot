@@ -1,20 +1,20 @@
 # Customer Success Copilot
 
-KI-gestützter Customer Success & Experience Copilot – am Beispiel der fiktiven Hotel- und Restaurant-Software Gastgeber Cloud.
+AI-powered Customer Success & Experience Copilot – using the fictional hotel and restaurant software Gastgeber Cloud as an example.
 
-> Gastgeber Cloud ist ein fiktives Unternehmen. Alle Daten in diesem Projekt sind Testdaten.
+> Gastgeber Cloud is a fictional company. All data in this project is test data.
 
-Gastgeber Cloud ist eine erfundene Software-Firma, die Hotels und Restaurants eine Buchungs- und Kassensoftware verkauft. Der Copilot unterstützt die Customer Success Managerin dieser Firma: 200 fiktive Kunden, Health Score, CX-Kennzahlen (NPS, CSAT, CES), KI-Agenten mit menschlicher Freigabe, n8n-Automatisierung, Streamlit-Oberfläche und Power BI.
+Gastgeber Cloud is a fictional software company that sells booking and point-of-sale software to hotels and restaurants. The copilot supports this company's Customer Success Manager: 200 fictional customers, health score, CX metrics (NPS, CSAT, CES), AI agents with human approval, n8n automation, a Streamlit interface, and Power BI.
 
-## Projektstand
+## Project status
 
 Board: [Customer Success Copilot](https://github.com/users/Julia20250701/projects/1)
 
-Dateien im Repo:
-- `CLAUDE.md` – Arbeitsregeln für den KI-Coding-Assistenten (Claude Code) in diesem Projekt
-- `README.md` – Projektbeschreibung (diese Datei)
-- `DECISIONS.md` – Protokoll wichtiger Entscheidungen
-- `pyproject.toml` – Python-Projekt-Konfiguration (uv)
-- `.python-version` – festgelegte Python-Version
-- `.env.example` – Vorlage für Umgebungsvariablen (ohne echte Secrets)
-- `.gitignore` – Dateien, die nicht ins Git-Repo sollen
+Files in this repo:
+- `CLAUDE.md` – working rules for the AI coding assistant (Claude Code) on this project
+- `README.md` – project description (this file)
+- `DECISIONS.md` – log of key decisions
+- `pyproject.toml` – Python project configuration (uv)
+- `.python-version` – pinned Python version
+- `.env.example` – template for environment variables (no real secrets)
+- `.gitignore` – files excluded from the Git repo
