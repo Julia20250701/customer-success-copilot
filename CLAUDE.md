@@ -4,7 +4,7 @@ Hi, ich bin Jule und leite dieses Projekt. Mir ist wichtig, dass ich jeden Schri
 
 ## Projekt
 
-Gastgeber Cloud ist eine erfundene Software-Firma, die Hotels und Restaurants eine Buchungs- und Kassensoftware verkauft. Dieses Projekt ist ein Customer Success & Experience Copilot für die Customer Success Managerin dieser Firma: 200 fiktive Kunden, Health Score, CX-Kennzahlen (NPS, CSAT, CES), KI-Agenten mit menschlicher Freigabe, n8n-Automatisierung, Streamlit-Oberfläche und Power BI. Alle Daten sind Testdaten.
+Dieses Projekt heißt **customer-success-copilot** – ein KI-gestützter Customer Success & Experience Copilot, am Beispiel der fiktiven Hotel- und Restaurant-Software Gastgeber Cloud. Gastgeber Cloud ist eine erfundene Software-Firma, die Hotels und Restaurants eine Buchungs- und Kassensoftware verkauft. Der Copilot unterstützt die Customer Success Managerin dieser Firma: 200 fiktive Kunden, Health Score, CX-Kennzahlen (NPS, CSAT, CES), KI-Agenten mit menschlicher Freigabe, n8n-Automatisierung, Streamlit-Oberfläche und Power BI. Alle Daten sind Testdaten.
 
 ## Regeln
 

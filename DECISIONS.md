@@ -37,3 +37,9 @@ Jeder Eintrag dokumentiert eine Entscheidung: was entschieden wurde, warum, und 
 **Entscheidung:** Das GitHub-Repo wird von Anfang an öffentlich angelegt.
 **Begründung:** Nachvollziehbarer Entwicklungsverlauf über die Commit-Historie. Das Projekt enthält ausschließlich fiktive Daten und keine Secrets, daher besteht kein Risiko.
 **Verworfene Alternative:** Privat starten und am Ende veröffentlichen.
+
+## 007 · 2026-11-04 · Projektname customer-success-copilot
+
+**Entscheidung:** Der Projektname beschreibt die Funktion (customer-success-copilot).
+**Begründung:** Gastgeber Cloud bleibt die fiktive Firma in den Daten.
+**Verworfene Alternative:** Projekt nach der fiktiven Firma benennen.
