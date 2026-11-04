@@ -17,7 +17,7 @@ Jeder Eintrag dokumentiert eine Entscheidung: was entschieden wurde, warum, und 
 ## 003 · 2026-11-04 · Fiktive Firma „Gastgeber Cloud"
 
 **Entscheidung:** Das Projekt basiert auf der fiktiven Firma „Gastgeber Cloud" (Hotel- und Restaurant-Software).
-**Begründung:** Realistische Kundendaten ohne echte Firmendaten; passt zu Jules Gastro-Erfahrung.
+**Begründung:** Domänenwissen aus über 10 Jahren Hotellerie und Gastronomie ermöglicht realistische Kundendaten, Tickets und Prozesse – ohne echte Firmendaten.
 **Verworfene Alternative:** Echtes Unternehmen oder öffentlicher Datensatz.
 
 ## 004 · 2026-11-04 · Code und Kommentare auf Englisch, Erklärungen auf Deutsch
@@ -35,5 +35,5 @@ Jeder Eintrag dokumentiert eine Entscheidung: was entschieden wurde, warum, und 
 ## 006 · 2026-11-04 · Repo von Anfang an öffentlich
 
 **Entscheidung:** Das GitHub-Repo wird von Anfang an öffentlich angelegt.
-**Begründung:** Recruiter sehen den Fortschritt über sieben Wochen; alle Daten sind fiktiv, daher kein Risiko.
+**Begründung:** Nachvollziehbarer Entwicklungsverlauf über die Commit-Historie. Das Projekt enthält ausschließlich fiktive Daten und keine Secrets, daher besteht kein Risiko.
 **Verworfene Alternative:** Privat starten und am Ende veröffentlichen.
