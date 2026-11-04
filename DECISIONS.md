@@ -1,45 +1,45 @@
-# Entscheidungsprotokoll
+# Decision Log
 
-Jeder Eintrag dokumentiert eine Entscheidung: was entschieden wurde, warum, und welche Alternative verworfen wurde. Einträge werden nicht gelöscht oder überschrieben. Wird eine Entscheidung später geändert, bleibt der alte Eintrag stehen und bekommt den Vermerk „ersetzt durch 00X".
+Each entry documents a decision: what was decided, why, and which alternative was rejected. Entries are never deleted or overwritten. If a decision changes later, the old entry stays and gets a note "superseded by 00X".
 
-## 001 · 2026-11-04 · Entwicklung nur in WSL 2 (Ubuntu)
+## 001 · 2026-11-04 · Development only in WSL 2 (Ubuntu)
 
-**Entscheidung:** Entwicklung ausschließlich in WSL 2 (Ubuntu), nicht gemischt mit Windows.
-**Begründung:** Gleiche Umgebung wie auf Servern, Docker läuft ohne Umwege.
-**Verworfene Alternative:** Native Windows-Entwicklung.
+**Decision:** Development takes place exclusively in WSL 2 (Ubuntu), not mixed with Windows.
+**Reasoning:** Same environment as on servers; Docker runs without detours.
+**Rejected alternative:** Native Windows development.
 
-## 002 · 2026-11-04 · uv und pyproject.toml statt requirements.txt
+## 002 · 2026-11-04 · uv and pyproject.toml instead of requirements.txt
 
-**Entscheidung:** Abhängigkeits- und Projektverwaltung mit uv und pyproject.toml.
-**Begründung:** Reproduzierbare Installation mit einem Befehl.
-**Verworfene Alternative:** pip mit requirements.txt.
+**Decision:** Dependency and project management with uv and pyproject.toml.
+**Reasoning:** Reproducible installation with a single command.
+**Rejected alternative:** pip with requirements.txt.
 
-## 003 · 2026-11-04 · Fiktive Firma „Gastgeber Cloud"
+## 003 · 2026-11-04 · Fictional company "Gastgeber Cloud"
 
-**Entscheidung:** Das Projekt basiert auf der fiktiven Firma „Gastgeber Cloud" (Hotel- und Restaurant-Software).
-**Begründung:** Domänenwissen aus über 10 Jahren Hotellerie und Gastronomie ermöglicht realistische Kundendaten, Tickets und Prozesse – ohne echte Firmendaten.
-**Verworfene Alternative:** Echtes Unternehmen oder öffentlicher Datensatz.
+**Decision:** The project is based on the fictional company "Gastgeber Cloud" (hotel and restaurant software).
+**Reasoning:** Domain knowledge from more than 10 years in hospitality and food service enables realistic customer data, tickets, and processes – without any real company data.
+**Rejected alternative:** A real company or a public dataset.
 
-## 004 · 2026-11-04 · Code und Kommentare auf Englisch, Erklärungen auf Deutsch
+## 004 · 2026-11-04 · Repository language is English
 
-**Entscheidung:** Code und Kommentare werden auf Englisch geschrieben, Erklärungen an Jule auf Deutsch.
-**Begründung:** Standard in Tech-Teams.
-**Verworfene Alternative:** Alles auf Deutsch.
+**Decision:** All repository content (code, docs, issues, commits, user interface) is in English. Explanations to Jule in English by default; in German when she asks.
+**Reasoning:** English is the working language in most software teams and makes the project readable for international collaborators. Explanations stay flexible so that understanding always comes first.
+**Rejected alternative:** A bilingual setup (German and English) – more maintenance, no real benefit.
 
-## 005 · 2026-11-04 · OpenAI als LLM-Anbieter
+## 005 · 2026-11-04 · OpenAI as LLM provider
 
-**Entscheidung:** OpenAI wird als LLM-Anbieter verwendet.
-**Begründung:** API-Key ist bereits vorhanden.
-**Verworfene Alternative:** Anthropic.
+**Decision:** OpenAI is used as the LLM provider.
+**Reasoning:** An API key is already available.
+**Rejected alternative:** Anthropic.
 
-## 006 · 2026-11-04 · Repo von Anfang an öffentlich
+## 006 · 2026-11-04 · Repo public from the start
 
-**Entscheidung:** Das GitHub-Repo wird von Anfang an öffentlich angelegt.
-**Begründung:** Nachvollziehbarer Entwicklungsverlauf über die Commit-Historie. Das Projekt enthält ausschließlich fiktive Daten und keine Secrets, daher besteht kein Risiko.
-**Verworfene Alternative:** Privat starten und am Ende veröffentlichen.
+**Decision:** The GitHub repo is created public from the start.
+**Reasoning:** A traceable development history through the commit log. The project contains only fictional data and no secrets, so there is no risk.
+**Rejected alternative:** Start private and open it up at the end.
 
-## 007 · 2026-11-04 · Projektname customer-success-copilot
+## 007 · 2026-11-04 · Project name customer-success-copilot
 
-**Entscheidung:** Der Projektname beschreibt die Funktion (customer-success-copilot).
-**Begründung:** Gastgeber Cloud bleibt die fiktive Firma in den Daten.
-**Verworfene Alternative:** Projekt nach der fiktiven Firma benennen.
+**Decision:** The project name describes the function (customer-success-copilot).
+**Reasoning:** Gastgeber Cloud remains the fictional company within the data.
+**Rejected alternative:** Name the project after the fictional company.

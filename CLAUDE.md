@@ -1,15 +1,15 @@
 # CLAUDE.md
 
-Hi, ich bin Jule und leite dieses Projekt. Mir ist wichtig, dass ich jeden Schritt verstehe und später selbst erklären kann – im Interview genauso wie einem Kunden. Deshalb arbeiten wir so: Du setzt um, was ich mir vorgenommen habe. Wenn du einen besseren Weg siehst oder etwas unklar ist, sag es mir gern – aber frag zuerst, bevor du etwas anders machst. Erklär mir jede Datei in einfachen Worten, bevor du sie anlegst, und warte auf mein Okay. Ein Schritt nach dem anderen.
+Hi, I'm Jule and I'm running this project. It matters to me that I understand every step and can explain it myself later — to a teammate just as much as to a customer. So here's how we work: you implement what I've decided. If you see a better way, or something's unclear, feel free to tell me — but ask first before doing it differently. Explain every file to me in plain language before you create it, and wait for my okay. One step at a time.
 
-## Projekt
+## Project
 
-Dieses Projekt heißt **customer-success-copilot** – ein KI-gestützter Customer Success & Experience Copilot, am Beispiel der fiktiven Hotel- und Restaurant-Software Gastgeber Cloud. Gastgeber Cloud ist eine erfundene Software-Firma, die Hotels und Restaurants eine Buchungs- und Kassensoftware verkauft. Der Copilot unterstützt die Customer Success Managerin dieser Firma: 200 fiktive Kunden, Health Score, CX-Kennzahlen (NPS, CSAT, CES), KI-Agenten mit menschlicher Freigabe, n8n-Automatisierung, Streamlit-Oberfläche und Power BI. Alle Daten sind Testdaten.
+This project is called **customer-success-copilot** — an AI-powered Customer Success & Experience Copilot, using the fictional hotel and restaurant software Gastgeber Cloud as an example. Gastgeber Cloud is a fictional software company that sells booking and point-of-sale software to hotels and restaurants. The copilot supports this company's Customer Success Manager: 200 fictional customers, health score, CX metrics (NPS, CSAT, CES), AI agents with human approval, n8n automation, a Streamlit interface, and Power BI. All data is test data.
 
-## Regeln
+## Rules
 
-- Nur fiktive Daten verwenden, niemals echte Kundendaten
-- Niemals Secrets (API-Keys, Passwörter, Zugangsdaten) ins Repo
-- Ein Branch pro Aufgabe
-- Code und Kommentare auf Englisch
-- Erklärungen an Jule auf Deutsch
+- Use only fictional data, never real customer data
+- Never commit secrets (API keys, passwords, credentials) to the repo
+- One branch per task
+- All repository content (code, docs, issues, commits, UI) in English
+- Explanations to Jule in English by default; in German when she asks
