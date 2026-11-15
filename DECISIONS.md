@@ -43,3 +43,13 @@ Each entry documents a decision: what was decided, why, and which alternative wa
 **Decision:** The project name describes the function (customer-success-copilot).
 **Reasoning:** Gastgeber Cloud remains the fictional company within the data.
 **Rejected alternative:** Name the project after the fictional company.
+
+## 008 · 2026-11-15 · Postgres with pgvector in Docker Compose
+
+**Decision:** Postgres runs locally via Docker Compose, using the pgvector/pgvector image so the pgvector extension is available for vector search.
+**Reasoning:** One database serves both customer data and AI search, and the setup is identical on every machine.
+**Rejected alternatives:**
+- Installing Postgres directly on the machine – versions differ between machines, it's harder to reset, and the setup can't be shared as a file.
+- A separate vector database like Chroma – a second system to run and keep in sync; with pgvector, one SQL query can combine customer data and similar tickets, and for 200 customers pgvector is fast enough.
+
+**Consequence:** Docker Desktop must be running to use the database.
