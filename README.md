@@ -17,3 +17,15 @@ Files in this repo:
 - `.python-version` – pinned Python version
 - `.env.example` – template for environment variables (no real secrets)
 - `.gitignore` – files excluded from the Git repo
+- `docker-compose.yml` – local Postgres (with pgvector) via Docker Compose
+
+## Run the database locally
+
+Requires Docker Desktop to be running.
+
+```bash
+cp .env.example .env    # fill in your own local values
+docker compose up -d    # start Postgres
+docker compose ps       # check it's healthy
+docker compose stop     # stop it (your data is kept)
+```
