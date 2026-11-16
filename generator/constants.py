@@ -92,3 +92,105 @@ STALL_BASE_PROBABILITY = {
 STALL_CANCELLED_EARLY_BONUS = 0.25
 STALL_RECENT_BONUS = 0.15
 STALL_RECENT_TENURE_MONTHS = 6
+
+# champion_loss: when the champion actually leaves, as a fraction of [customer_since, window_end]
+CHAMPION_LOSS_EVENT_PROGRESS_RANGE = (0.5, 0.8)
+CHAMPION_LOSS_ACTIVE_USERS_AFTER = 1  # staff still use the POS, so active_users drops to 1 and stays there
+
+# Usage: daily baselines (Poisson means), before season/weekday/story factors.
+# pos_transactions is drawn per customer from a range (a restaurant's typical volume),
+# then varies day to day with season/weekday only — it keeps running regardless of story.
+USAGE_BASELINE_BY_SIZE = {
+    "small": {"logins": 3, "active_users": 2, "bookings_created": 3},
+    "medium": {"logins": 8, "active_users": 5, "bookings_created": 8},
+    "large": {"logins": 18, "active_users": 12, "bookings_created": 18},
+}
+BOOKINGS_CREATED_TYPE_FACTOR = {"restaurant": 0.6, "hotel": 1.0, "both": 1.0}  # table reservations vs. room bookings
+POS_TRANSACTIONS_RANGE_BY_SIZE = {"small": (30, 70), "medium": (50, 150), "large": (150, 300)}
+# A shift is one person on one day; Thursday's planning covers the whole next week.
+SHIFTS_PLANNED_THURSDAY_MEAN_BY_SIZE = {"small": 25, "medium": 60, "large": 120}  # 0 on all other days
+
+SEASON_FACTOR_BY_MONTH = {
+    1: 0.6, 2: 0.6, 3: 1.0, 4: 1.0, 5: 1.3, 6: 1.3, 7: 1.3, 8: 1.3, 9: 1.3, 10: 1.0, 11: 1.0, 12: 1.3,
+}
+WEEKEND_FACTOR = 1.3  # Friday and Saturday
+RESTAURANT_MONDAY_CLOSED_SHARE = 0.6
+PRE_GOLIVE_USAGE_FACTOR = 0.1
+
+LOW_ENGAGEMENT_DECLINE_MONTHS_RANGE = (3, 6)  # decline starts this many months before window_end
+LOW_ENGAGEMENT_DECLINE_FLOOR = 0.2  # down to ~20% of normal by window_end
+CHAMPION_LOSS_TRANSITION_DAYS = 21  # days at active_users=1 before other metrics are also scaled down
+CHAMPION_LOSS_METRIC_FACTOR = 0.15  # logins/bookings_created/shifts_planned factor once active_users=1
+LOW_ADOPTION_SHIFTS_ZERO_SHARE = 0.9  # share of Thursdays with 0 shifts_planned anyway
+LOW_ADOPTION_BOOKINGS_FACTOR = 0.25
+
+# Tickets
+FEATURE_NAMES_BY_TYPE = {
+    "restaurant": ["POS till", "receipt printer", "TSE", "table reservations", "table map", "shift planner", "DATEV export"],
+    "hotel": ["room calendar", "channel manager", "online check-in", "guest registration form", "shift planner", "invoice export"],
+    "both": [
+        "POS till", "receipt printer", "TSE", "table reservations", "table map", "shift planner", "DATEV export",
+        "room calendar", "channel manager", "online check-in", "guest registration form", "invoice export",
+    ],
+}
+TICKETS_PER_MONTH_MEAN_BY_STORY = {
+    "healthy": 1.0, "price_sensitive": 1.0, "low_engagement": 0.4, "low_adoption": 1.5, "champion_loss": 1.0,
+}
+PRE_GOLIVE_HOWTO_SHARE = 0.9  # before go-live, tickets are mostly setup questions
+TECHNICAL_WEEKEND_WEIGHT = 2.0  # Fri/Sat weighted this much more than other weekdays for technical tickets
+TICKET_CATEGORY_PROBABILITIES_BY_STORY = {
+    "healthy":          {"technical": 0.6, "how-to": 0.2, "billing": 0.1, "feature_request": 0.1},
+    "price_sensitive":  {"technical": 0.25, "how-to": 0.15, "billing": 0.5, "feature_request": 0.1},
+    "low_engagement":   {"technical": 0.3, "how-to": 0.3, "billing": 0.2, "feature_request": 0.2},
+    "low_adoption":     {"technical": 0.15, "how-to": 0.65, "billing": 0.1, "feature_request": 0.1},
+    "champion_loss":    {"technical": 0.5, "how-to": 0.2, "billing": 0.2, "feature_request": 0.1},
+}
+CHAMPION_LOSS_HOWTO_SHARE_AFTER_EVENT = 0.8
+# Technical tickets cluster around service hours, which depend on customer type.
+TECHNICAL_HOUR_CLUSTERS_BY_TYPE = {
+    "restaurant": [11, 12, 17, 18, 19, 20, 21],  # opening, lunch, dinner service
+    "hotel": [7, 8, 9, 10, 11, 15, 16, 17, 18],  # check-out, check-in
+    "both": sorted({11, 12, 17, 18, 19, 20, 21, 7, 8, 9, 10, 15, 16}),
+}
+# how-to/billing/feature_request, and all pre-go-live tickets, cluster in the quiet weekday afternoon instead.
+QUIET_HOUR_RANGE = (14, 17)
+SERVICE_HOURS_PRIORITY_PROBABILITIES = {"low": 0.15, "medium": 0.35, "high": 0.35, "urgent": 0.15}
+OFF_HOURS_PRIORITY_PROBABILITIES = {"low": 0.45, "medium": 0.35, "high": 0.15, "urgent": 0.05}
+RESOLVED_FIRST_CONTACT_SHARE = 0.7
+FIRST_CONTACT_RESOLUTION_HOURS_RANGE = (0.25, 2)  # 15 min to 2h, when resolved_first_contact
+RESOLUTION_HOURS_RANGE_BY_PRIORITY = {"urgent": (1, 4), "high": (4, 24), "medium": (24, 72), "low": (72, 168)}  # otherwise
+TICKET_CHANNELS = ["email", "phone", "chat", "portal"]
+CHANNEL_PROBABILITIES_SERVICE_HOURS = {"email": 0.0, "phone": 0.7, "chat": 0.3, "portal": 0.0}
+CHANNEL_PROBABILITIES_QUIET_HOURS = {"email": 0.35, "phone": 0.2, "chat": 0.2, "portal": 0.25}
+PHONE_LOG_DELAY_MINUTES_RANGE = (5, 30)  # phone tickets are logged by the agent after the call, in third person
+
+# Surveys
+NPS_FIRST_MONTHS_AFTER_GO_LIVE = 1
+NPS_INTERVAL_MONTHS = 6
+CSAT_SHARE_OF_RESOLVED_TICKETS = 0.3
+CES_WEEKS_AFTER_GO_LIVE_RANGE = (2, 4)
+NPS_RESPONDENT_IS_CONTACT_ROLE_SHARE = 0.8  # otherwise a random other allowed role
+# CES scale: 1 = very easy/low effort, 7 = very difficult/high effort (lower is better)
+NPS_RANGE_BY_STORY = {
+    "healthy": (8, 10), "price_sensitive": (6, 8),
+    "low_adoption": (4, 6), "champion_loss": (7, 9),
+}
+NPS_LOW_ENGAGEMENT_RANGE_BEFORE = (7, 9)  # before low_engagement_decline_start
+NPS_LOW_ENGAGEMENT_RANGE_AFTER = (3, 5)  # by window_end, in step with the usage decline
+NPS_CHAMPION_LOSS_AFTER_EVENT_RANGE = (3, 5)
+CES_RANGE_BY_STORY = {
+    "healthy": (1, 3), "price_sensitive": (2, 4), "low_engagement": (3, 5),
+    "low_adoption": (4, 6), "champion_loss": (2, 4),
+}
+CES_HIGH_EFFORT_MIN = 5  # CES >= this counts as a bad (high-effort) experience
+CSAT_BASE_RANGE_BY_STORY = {
+    "healthy": (4, 5), "price_sensitive": (3, 5), "low_engagement": (2, 4), "low_adoption": (2, 4),
+}
+CSAT_CHAMPION_LOSS_BEFORE_EVENT_RANGE = (4, 5)
+CSAT_CHAMPION_LOSS_AFTER_EVENT_RANGE = (2, 3)
+
+# Survey comments: not every survey gets one, and low scores get one more often
+COMMENT_SHARE_DEFAULT = 0.4
+COMMENT_SHARE_LOW_SCORE = 0.65
+NPS_LOW_SCORE_MAX = 6
+CSAT_LOW_SCORE_MAX = 2
